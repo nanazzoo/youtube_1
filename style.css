@@ -98,18 +98,26 @@ section.info {
 
 .info .metadata .titleAndButton .title {
     font-size: var(--font-large);
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .title.clamp {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    margin-right: var(--padding);
 }
 
 .info .metadata .titleAndButton .moreBtn {
     height: 100%;
     margin-top: 10px;
     font-size: 16px;
+    transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked {
+    transform: rotate(180deg);
 }
 
 .info .metadata .views {
